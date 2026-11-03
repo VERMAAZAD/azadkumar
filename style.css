@@ -194,3 +194,10 @@ h1 .k::after{content:"";position:absolute;left:0;right:0;bottom:-.06em;height:.1
 @media(max-width:900px){.hg,.about,.cbox{grid-template-columns:1fr}.links{display:none;position:absolute;top:calc(100% + 10px);left:12px;right:12px;flex-direction:column;gap:0;background:var(--sf);border:1px solid var(--ln);border-radius:20px;box-shadow:var(--sh);padding:6px 16px 12px}.links.open{display:flex}.links a{padding:15px 4px;border-radius:0;border-bottom:1px solid var(--ln);font-size:1.05rem}.links a.on{background:none}.burger{display:block}.bar{display:flex}}
 @media(max-width:520px){.cta .btn{width:100%}.fig{grid-template-columns:repeat(2,1fr)}details.card summary{padding:18px;grid-template-columns:44px 1fr 20px}details ul{padding:0 18px 18px 18px}.stp{grid-template-columns:44px 1fr;gap:14px}.stp i{width:44px;height:44px}.stp::before{left:21px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+@media(max-width:700px){
+  .rv{transform:translateY(24px)}     
+  .pc,.pc>div{min-width:0}
+  .pc:not(:last-child)::after{display:none}
+}
+@media(max-width:520px){.pc{grid-template-columns:minmax(0,1fr)}}
+.pcols li{overflow-wrap:anywhere}
