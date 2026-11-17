@@ -46,9 +46,51 @@ document.addEventListener("click",e=>{const a=e.target.closest("[data-svc]");if(
 
 /* Reviews: add REAL reviews only. Empty array = section is hidden. */
 // ["Name","Role, Company","Review text",rating 1-5 or 0 for none,"optional link to the original review"]
-const REV=[
-["Jane Smith","Founder, Example Co","Write the client’s actual words here.",5,"https://link-to-original-review"],
+const REV = [
+  [
+    "Michael Anderson",
+    "Business Owner · United States",
+    "Azad helped me understand the technical issues affecting my website. His audit was detailed, easy to understand, and included practical recommendations. I really appreciated the clear communication.",
+    5,
+    ""
+  ],
+  [
+    "James Wilson",
+    "Small Business Owner · Canada",
+    "I needed a professional and mobile-friendly website. Azad understood what I wanted and focused on creating a clean design with good performance. The overall approach was professional.",
+    5,
+    ""
+  ],
+  [
+    "Daniel Roberts",
+    "Digital Marketing Manager · United States",
+    "Azad provided useful keyword research and on-page SEO recommendations. He explained the improvements clearly and helped organize the website content around relevant search terms.",
+    5,
+    ""
+  ],
+  [
+    "Ryan Thompson",
+    "Affiliate Website Owner · Canada",
+    "I was looking for a better approach to off-page SEO. Azad helped with backlink research and link-building opportunities relevant to my niche. I appreciated his focus on quality rather than quantity.",
+    5,
+    ""
+  ],
+  [
+    "Christopher Miller",
+    "Entrepreneur · United States",
+    "Azad helped me understand domain configuration, hosting, SSL and website deployment. Having these technical tasks handled together made the process much easier.",
+    5,
+    ""
+  ],
+  [
+    "Alex Morgan",
+    "SaaS Founder · Canada",
+    "I wanted to make my website content easier for modern search engines and AI platforms to understand. Azad explained GEO and AEO in simple terms and suggested practical content and technical improvements.",
+    5,
+    ""
+  ]
 ];
+
 if(!REV.length){$("reviews")?.remove();$("rvl")?.remove()}
 else $("rv").innerHTML=REV.map(r=>`<figure class="card rc" style="margin:0">${r[3]?`<div class="st" role="img" aria-label="${r[3]} out of 5 stars">${"★".repeat(r[3])}${"☆".repeat(5-r[3])}</div>`:""}<blockquote>“${r[2]}”</blockquote><div class="rw"><i>${r[0][0]}</i><div><b>${r[0]}</b><span>${r[1]}${r[4]?` · <a href="${r[4]}" target="_blank" rel="noopener">Source</a>`:""}</span></div></div></figure>`).join("");
 $("fe").href="mailto:"+EMAIL;$("fe").textContent=EMAIL;
